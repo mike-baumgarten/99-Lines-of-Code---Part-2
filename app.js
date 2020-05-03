@@ -11,10 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
         let friends = ['Matt', 'Joe', 'Danica', 'MeiLee', 'Nikki'];
 
         for (let i = 0; i < friends.length; ++i) {
-            let name = friends[i]
-            console.log(name.toUpperCase());
 
-            for (let l = 99; l > 0; l--) {
+            let div = document.createElement('div');
+            div.className = "friend"
+            let name = friends[i];
+            let h3 = document.createElement('h3')
+            let h3Text = document.createTextNode(name);
+            h3.appendChild(h3Text);
+            div.appendChild(h3);
+            document.body.appendChild(div);
+            for (let l = 5; l > 0; l--) {
                 let line = l - 1;
                 if (l == 1) {
                     // last line of code
